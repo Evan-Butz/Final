@@ -8,7 +8,7 @@ import javax.swing.*;
 import javax.swing.table.TableModel;
 
 public class Table extends JPanel {
-	HeadphoneInfo data = new HeadphoneInfo();
+	Headphone data = new Headphone();
 	private boolean DEBUG = false;
 
 	public Table() {
@@ -28,11 +28,6 @@ public class Table extends JPanel {
 					"Neodymiom", "600Ω", "15.52 oz (Without Cord)", "$1,099.00" },
 				{ "V-Moda", "M-100", "Closed Back", "50mm", "5 - 30,000", "103 dB/mW", "Neodymium", "32Ω",
 						"9.88 oz (Without Cord)", "$270.00 - $27,000.00" }
-//				 {data.Sony},
-//				 {data.Sennheiser},
-//				 {data.Grado},
-//				 {data.Beyerdynamic},
-//				 {data.VModa}
 		};
 		final JTable table1 = new JTable(rowData, columnData);
 		table1.setPreferredScrollableViewportSize(new Dimension(1700, 150));
