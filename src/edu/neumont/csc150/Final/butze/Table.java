@@ -13,6 +13,7 @@ public class Table extends JPanel {
 
 	public Table() {
 		super(new GridLayout(1, 0));
+		HeadphoneList hl = new HeadphoneList();
 
 		String[] columnData = { "Brand", "Model", "Type", "Driver", "Frequency Response (Hz)", "Sensitivities",
 				"Magnet", "Impedence (OHM)", "Weight", "Price" };
