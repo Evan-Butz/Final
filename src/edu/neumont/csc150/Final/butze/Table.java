@@ -20,7 +20,7 @@ public class Table extends JPanel {
 
 		Object[][] rowData = { 
 				{ "Sony", "MDR-Z7", "Closed Back", "70mm", "4 - 100,000", "102 dB/mW", "Neodymium",
-				"70Ω", "11.82 oz (Without Cord)", "$699.99" },
+				"70Ω", "11.82 oz (Without Cord)", "Japan", "$699.99" },
 				{ "Sennheiser", "HD 800", "Open Back", "56mm", "6 - 51,000", "10 dB/mW", "Neodymium", "300Ω",
 					"11.64 oz (Without Cord)", "$1499.95" },
 				{ "Grado", "PS1000E", "Open Air", "50mm", "5 - 50,000", "98 dB/mW", "Neodymium", "32Ω", "24.10 oz (Without Cord)",
