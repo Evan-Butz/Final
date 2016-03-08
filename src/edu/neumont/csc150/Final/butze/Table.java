@@ -3,6 +3,7 @@ package edu.neumont.csc150.Final.butze;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Vector;
 
 import javax.swing.*;
 import javax.swing.table.TableModel;
@@ -15,8 +16,20 @@ public class Table extends JPanel {
 		super(new GridLayout(1, 0));
 //		hs.allSets();
 //		hs.keyUnion();
-			
-		final JTable table1 = new JTable(hs.getKeys(), hs.getAttributes());
+//		Vector<Vector<String>> people = new Vector<Vector<String>>();
+//		Vector<String> columnNames = new Vector<String>();
+//		Vector<String> person2= new Vector<String>();
+//		Vector<String> person1= new Vector<String>();
+//		columnNames.addElement("First Name");
+//		columnNames.addElement("Last Name");
+//		person1.addElement("Evan");
+//		person1.addElement("Butz");
+//		person2.addElement("Shawn");
+//		person2.addElement("Butz");
+//		people.addElement(person1);
+//		people.addElement(person2);
+		
+		final JTable table1 = new JTable(hs.getAllAttributes(), hs.getKeys());
 		table1.setPreferredScrollableViewportSize(new Dimension(1700, 150));
 		table1.setFillsViewportHeight(true);
 

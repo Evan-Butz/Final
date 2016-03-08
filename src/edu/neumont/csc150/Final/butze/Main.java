@@ -1,12 +1,6 @@
 package edu.neumont.csc150.Final.butze;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-
-import javax.swing.SwingUtilities;
+import javax.swing.*;
 
 public class Main {
 
