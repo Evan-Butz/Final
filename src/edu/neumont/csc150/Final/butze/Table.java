@@ -10,27 +10,15 @@ import javax.swing.table.TableModel;
 
 public class Table extends JPanel {
 	private boolean DEBUG = false;
-	HeadphoneSets hs = new HeadphoneSets();
+	private HeadphoneSets hs = new HeadphoneSets();
 
 	public Table() {
 		super(new GridLayout(1, 0));
 //		hs.allSets();
 //		hs.keyUnion();
-//		Vector<Vector<String>> people = new Vector<Vector<String>>();
-//		Vector<String> columnNames = new Vector<String>();
-//		Vector<String> person2= new Vector<String>();
-//		Vector<String> person1= new Vector<String>();
-//		columnNames.addElement("First Name");
-//		columnNames.addElement("Last Name");
-//		person1.addElement("Evan");
-//		person1.addElement("Butz");
-//		person2.addElement("Shawn");
-//		person2.addElement("Butz");
-//		people.addElement(person1);
-//		people.addElement(person2);
 		
 		final JTable table1 = new JTable(hs.getAllAttributes(), hs.getKeys());
-		table1.setPreferredScrollableViewportSize(new Dimension(1700, 150));
+		table1.setPreferredScrollableViewportSize(new Dimension(1700, 100));
 		table1.setFillsViewportHeight(true);
 
 		if (DEBUG) {

@@ -2,22 +2,23 @@ package edu.neumont.csc150.Final.butze;
 
 import java.util.*;
 
+import javax.swing.ImageIcon;
+
 public class HeadphoneSets {
 	private HashSet<HashMap<String, String>> headphoneSet;
-	private Vector<String> keys = new Vector<String>();
+	private Vector<String> keys;
 	private Vector<Vector<String>> allAttributes = new Vector<Vector<String>>();
-	private Vector<String> sony = new Vector<String>();
-	private Vector<String> sennheiser = new Vector<String>();
-	private Vector<String> grado = new Vector<String>();
-	private Vector<String> beyerdynamic = new Vector<String>();
-	private Vector<String> vmoda = new Vector<String>();
+	private Vector<String> sony;
+	private Vector<String> sennheiser;
+	private Vector<String> grado;
+	private Vector<String> beyerdynamic;
+	private Vector<String> vmoda;
 
 	public HeadphoneSets() {
-		allSets();
 		keyUnion();
 	}
 
-	public void allSets() {
+	private void allSets() {
 		headphoneSet = new HashSet<HashMap<String, String>>();
 		headphoneSet.add(Sony());
 		headphoneSet.add(Sennheiser());
@@ -26,13 +27,14 @@ public class HeadphoneSets {
 		headphoneSet.add(VModa());
 	}
 
-	public void keyUnion() {
+	private void keyUnion() {
+		keys = new Vector<String>();
 		allSets();
 		for (HashMap<String, String> headphone : headphoneSet) {
 			for (String key : headphone.keySet()) {
 				if (!keys.contains(key)) {
-					// System.out.println(key);
 					keys.addElement(key);
+					 System.out.println(key);
 //					for (HashMap<String, String> h2 : headphoneSet) {
 //						// System.out.println(h2.get(key));
 //						sony.addElement(h2.get(key));
@@ -40,6 +42,10 @@ public class HeadphoneSets {
 				}
 			}
 		}
+//		for (String attributes : sony) {
+//			System.out.println(attributes);
+//			
+//		}
 //		allAttributes.addElement(sony);
 		// for (String keys : keys) {
 		// System.out.println(keys);
@@ -50,8 +56,9 @@ public class HeadphoneSets {
 		// }
 	}
 
-	public HashMap<String, String> Sony() {
+	private HashMap<String, String> Sony() {
 		HashMap<String, String> h = new HashMap<String, String>();
+		sony = new Vector<String>();
 		h.put("Company", "Sony");
 		h.put("Model", "MDR-Z7");
 		h.put("Type", "Closed Back");
@@ -62,14 +69,18 @@ public class HeadphoneSets {
 		h.put("Impedence", "70Ω");
 		h.put("Weight", "11.82 oz (Without Cord)");
 		h.put("Price", "$699.99");
-		sony.addElement(h.get(h.values()));
+			for (String values : h.values()) {
+				sony.addElement(values);
+			}
+//		sony.addElement(h.get(h.values()));
 		allAttributes.addElement(sony);
 
 		return h;
 	}
 
-	public HashMap<String, String> Sennheiser() {
+	private HashMap<String, String> Sennheiser() {
 		HashMap<String, String> h = new HashMap<String, String>();
+		sennheiser = new Vector<String>();
 		h.put("Company", "Sennheiser");
 		h.put("Model", "HD 800");
 		h.put("Type", "Open Back");
@@ -80,14 +91,18 @@ public class HeadphoneSets {
 		h.put("Impedence", "300Ω");
 		h.put("Weight", "11.64 oz (Without Cord)");
 		h.put("Price", "$1499.95");
-		sennheiser.addElement(h.get(h.values()));
+		for (String values : h.values()) {
+			sennheiser.addElement(values);
+		}
+//		sennheiser.addElement(h.get(h.values()));
 		allAttributes.addElement(sennheiser);
 
 		return h;
 	}
 
-	public HashMap<String, String> Grado() {
+	private HashMap<String, String> Grado() {
 		HashMap<String, String> h = new HashMap<String, String>();
+		grado = new Vector<String>();
 		h.put("Company", "Grado");
 		h.put("Model", "PS1000E");
 		h.put("Type", "Open Air");
@@ -98,14 +113,18 @@ public class HeadphoneSets {
 		h.put("Impedence", "32Ω");
 		h.put("Weight", "24.10 oz (Without Cord)");
 		h.put("Price", "$1695.00");
-		grado.addElement(h.get(h.values()));
+		for (String values : h.values()) {
+			grado.addElement(values);
+		}
+//		grado.addElement(h.get(h.values()));
 		allAttributes.addElement(grado);
 
 		return h;
 	}
 
-	public HashMap<String, String> Beyerdynamic() {
+	private HashMap<String, String> Beyerdynamic() {
 		HashMap<String, String> h = new HashMap<String, String>();
+		beyerdynamic = new Vector<String>();
 		h.put("Company", "Beyerdynamic");
 		h.put("Model", "T1 Tesla");
 		h.put("Type", "Semi-Open Back");
@@ -116,14 +135,18 @@ public class HeadphoneSets {
 		h.put("Impedence", "600Ω");
 		h.put("Weight", "15.52 oz (Without Cord)");
 		h.put("Price", "$1099.00");
-		beyerdynamic.addElement(h.get(h.values()));
+		for (String values : h.values()) {
+			beyerdynamic.addElement(values);
+		}
+//		beyerdynamic.addElement(h.get(h.values()));
 		allAttributes.addElement(beyerdynamic);
 
 		return h;
 	}
 
-	public HashMap<String, String> VModa() {
+	private HashMap<String, String> VModa() {
 		HashMap<String, String> h = new HashMap<String, String>();
+		vmoda = new Vector<String>();
 		h.put("Company", "V-Moda");
 		h.put("Model", "M-100");
 		h.put("Type", "Closed Back");
@@ -134,7 +157,10 @@ public class HeadphoneSets {
 		h.put("Impedence", "32Ω");
 		h.put("Weight", "9.88 oz (Without Cord)");
 		h.put("Price", "$270.00 - $27,000.00");
-		vmoda.addElement(h.get(h.values()));
+		for (String values : h.values()) {
+			vmoda.addElement(values);
+		}
+//		vmoda.addElement(h.get(h.values()));
 		allAttributes.addElement(vmoda);
 
 		return h;
