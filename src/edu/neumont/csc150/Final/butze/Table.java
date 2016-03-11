@@ -14,43 +14,16 @@ public class Table extends JPanel {
 
 	public Table() {
 		super(new GridLayout(1, 0));
-//		hs.allSets();
-//		hs.keyUnion();
 		
 		final JTable table1 = new JTable(hs.getAllAttributes(), hs.getKeys());
 		table1.setPreferredScrollableViewportSize(new Dimension(1700, 100));
 		table1.setFillsViewportHeight(true);
-
-		if (DEBUG) {
-			table1.addMouseListener(new MouseAdapter() {
-				public void mouseClicked(MouseEvent e) {
-					printDebugData(table1);
-				}
-			});
-		}
 
 		// Create the scroll pane and add the table to it.
 		JScrollPane scrollPane = new JScrollPane(table1);
 
 		// Add the scroll pane to this panel.
 		add(scrollPane);
-	}
-	
-
-	private void printDebugData(JTable table) {
-		int numRows = table.getRowCount();
-		int numCols = table.getColumnCount();
-		TableModel model = table.getModel();
-
-		System.out.println("Value of data: ");
-		for (int i = 0; i < numRows; i++) {
-			System.out.print("    row " + i + ":");
-			for (int j = 0; j < numCols; j++) {
-				System.out.print("  " + model.getValueAt(i, j));
-			}
-			System.out.println();
-		}
-		System.out.println("--------------------------");
 	}
 
 	public void GUI() {

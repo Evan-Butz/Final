@@ -2,7 +2,6 @@ package edu.neumont.csc150.Final.butze;
 
 import java.util.*;
 
-import javax.swing.ImageIcon;
 
 public class HeadphoneSets {
 	private HashSet<HashMap<String, String>> headphoneSet;
@@ -34,26 +33,10 @@ public class HeadphoneSets {
 			for (String key : headphone.keySet()) {
 				if (!keys.contains(key)) {
 					keys.addElement(key);
-					 System.out.println(key);
-//					for (HashMap<String, String> h2 : headphoneSet) {
-//						// System.out.println(h2.get(key));
-//						sony.addElement(h2.get(key));
-//					}
+//					 System.out.println(key);
 				}
 			}
 		}
-//		for (String attributes : sony) {
-//			System.out.println(attributes);
-//			
-//		}
-//		allAttributes.addElement(sony);
-		// for (String keys : keys) {
-		// System.out.println(keys);
-		//
-		// }
-		// for (String attributes : attributes) {
-		// System.out.println(attributes);
-		// }
 	}
 
 	private HashMap<String, String> Sony() {
@@ -72,7 +55,6 @@ public class HeadphoneSets {
 			for (String values : h.values()) {
 				sony.addElement(values);
 			}
-//		sony.addElement(h.get(h.values()));
 		allAttributes.addElement(sony);
 
 		return h;
@@ -94,7 +76,6 @@ public class HeadphoneSets {
 		for (String values : h.values()) {
 			sennheiser.addElement(values);
 		}
-//		sennheiser.addElement(h.get(h.values()));
 		allAttributes.addElement(sennheiser);
 
 		return h;
@@ -116,7 +97,6 @@ public class HeadphoneSets {
 		for (String values : h.values()) {
 			grado.addElement(values);
 		}
-//		grado.addElement(h.get(h.values()));
 		allAttributes.addElement(grado);
 
 		return h;
@@ -138,7 +118,6 @@ public class HeadphoneSets {
 		for (String values : h.values()) {
 			beyerdynamic.addElement(values);
 		}
-//		beyerdynamic.addElement(h.get(h.values()));
 		allAttributes.addElement(beyerdynamic);
 
 		return h;
@@ -160,7 +139,6 @@ public class HeadphoneSets {
 		for (String values : h.values()) {
 			vmoda.addElement(values);
 		}
-//		vmoda.addElement(h.get(h.values()));
 		allAttributes.addElement(vmoda);
 
 		return h;
